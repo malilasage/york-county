@@ -6,3 +6,6 @@ layout: collection
 collection: project
 entries_layout: grid
 ---
+### John Marot
+
+![image-center]({{ site.baseurl }}/assets/images/sample-context-sankey.png){: .align-center}

@@ -31,6 +31,9 @@ collections:
   research:
     output: true
     permalink: /:collection/:path/
+  project:
+    output: true
+    permalink: /:collection/:path/
 
 defaults:
   # _pages

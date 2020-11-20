@@ -1,5 +1,7 @@
 main:
-  - title: "foo"
+  - title: "Research"
     url: /research/
-  - title: "about"
+  - title: "About Us"
     url: /about/
+  - title: "What's in a House?"
+    url: /project/

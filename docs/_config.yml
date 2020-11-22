@@ -27,6 +27,10 @@ github_username:  jekyll
 ###
 include: ["_pages"]
 
+head_scripts:
+#  - https://code.jquery.com/jquery-3.3.1.min.js
+  - /assets/js/test.js
+
 collections:
   research:
     output: true

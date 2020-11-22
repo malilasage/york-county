@@ -1,0 +1,25 @@
+---
+---
+
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes";
+
+.layout--splash .masthead {
+  background-color: #ff0000;
+}
+/*.page__hero--overlay {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: cover;
+}
+.masthead {
+  top: -70px;
+  opacity: 0;
+}*/

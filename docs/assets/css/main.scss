@@ -9,6 +9,11 @@
 
 .layout--splash .masthead {
   background-color: #ff0000;
+  position: fixed;
+  width: 100%;
+  visibility: hidden;
+//  top: -70px;
+  //opacity: 0;
 }
 /*.page__hero--overlay {
   position: absolute;

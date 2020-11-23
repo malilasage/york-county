@@ -1,7 +1,7 @@
 
 (function() {
   //alert("hello");
-  $(window).on("load", () => {
+/*  $(window).on("load", () => {
     nav = document.getElementsByClassName("masthead");
     splashImage = document.getElementsByClassName("page__hero");
     console.log(splashImage); //change to if main page or just only run script from index

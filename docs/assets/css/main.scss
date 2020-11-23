@@ -7,24 +7,29 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes";
 
-.layout--splash .masthead {
-  background-color: #ff0000;
-  position: fixed;
-  width: 100%;
-  visibility: hidden;
-//  top: -70px;
-  //opacity: 0;
+.initial-content {
+  height: 100%;
 }
-/*.page__hero--overlay {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+.page__hero--overlay {
+  height: 100%;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
+  padding-bottom: 90%;
 }
+
+.wrapper {
+  position: relative;
+  padding-top: 20px;
+}
+
 .masthead {
-  top: -70px;
-  opacity: 0;
-}*/
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+#main {
+  height: 100%;
+}

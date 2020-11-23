@@ -11,6 +11,23 @@
   width: 50%;
 }
 
+.sK {
+  width: 90%;
+}
+
+#main {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.page__hero--overlay {
+  filter: grayscale(0.15);
+}
+
+.page__hero--overlay .page__title {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 1);
+}
+
 /*.initial-content {
   height: 100%;
 }

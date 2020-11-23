@@ -7,7 +7,11 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes";
 
-.initial-content {
+.max-size {
+  width: 50%;
+}
+
+/*.initial-content {
   height: 100%;
 }
 .page__hero--overlay {
@@ -28,8 +32,10 @@
   position: sticky;
   top: 0;
   background-color: #fff;
+  display: none;
+//  opacity: 0;
 }
 
 #main {
   height: 100%;
-}
+}*/

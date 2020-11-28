@@ -1,4 +1,36 @@
 console.log("hello");
+window.addEventListener('load', function() {
+    // console.log('All assets are loaded');
+    removeClass();
+})
+
+function removeClass(){
+  const slides = [...document.getElementsByClassName("slide")];
+    let options = {
+      rootMargin: "0px",
+      threshold: 0.25
+    };
+
+    const callback = (entries, observer) => {
+      entries.forEach(entry => {
+    		const { target } = entry;
+    		// console.log(entry, target)
+
+    		if (entry.intersectionRatio >= 0.25) {
+    			target.classList.add("is-visible");
+    		} else {
+    			target.classList.remove("is-visible");
+    		}
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    slides.forEach((slide, index) => {
+      observer.observe(slide);
+    });
+}
+
 
   //import Reveal from '{{ site.baseurl }}/assets/js/reveal.js/dist/reveal.esm.js';
   //import Markdown from '{{ site.baseurl }}/assets/js/reveal.js/plugin/markdown/markdown.esm.js';

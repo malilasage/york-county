@@ -29,6 +29,10 @@ include: ["_pages"]
 
 head_scripts:
   - https://code.jquery.com/jquery-3.3.1.min.js
+#  - /assets/js/reveal.js/dist/reveal.js
+#  - /assets/js/reveal.js/plugin/notes/notes.js
+#  - /assets/js/reveal.js/plugin/markdown/markdown.js
+#  - /assets/js/reveal.js/plugin/highlight/highlight.js
   - /assets/js/test.js
 
 collections:

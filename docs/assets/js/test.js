@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
 })
 
 function removeClass(){
-  const slides = [...document.getElementsByClassName("slide")];
+  const slides = [...document.getElementsByClassName("fade")];
     let options = {
       rootMargin: "0px",
       threshold: 0.25

@@ -12,11 +12,12 @@
 </head>
 <body>
   <div id="title" style="background-image: url('{{ site.baseurl }}/assets/images/4ec851e1114c13cd0678409ea18c6aaa.jpg')">
-    <h1>Title</h1>
+    <h1 class="fade">Title</h1>
+    <div>&#8964;</div>
   </div>
 
   <div id="intro">
-    <div class="slide">
+    <div class="slide fade">
     <h2>Intro</h2>
     <div class="text-container">
         <p>
@@ -29,7 +30,7 @@
     </div>
   </div>
   <div class="carousel-container" id="context">
-    <div class="slide">
+    <div class="slide fade">
       <h2>context</h2>
       <div class="flex-container">
       <div class="text-container flex-left">
@@ -52,14 +53,15 @@
       </div>
       </div>
     </div>
-      <a class="prev">&#10094;</a>
-  <a class="next">&#10095;</a>
+      <!-- <a class="prev">&#10094;</a> -->
+  <!-- <a class="next">&#10095;</a> -->
   </div>
   <div id="sankey">
-    <div class="wrapper">
-      <div class="text-box"></div>
-    </div>
-    <iframe src="" frameborder="0" class="data-viz"></iframe>
+    <!-- <div class="wrapper"> -->
+      <!-- <div class="text-box"></div> -->
+    <!-- </div> -->
+    <div class="data-viz" style="background-image: url('{{ site.baseurl }}/assets/images/sample-context-sankey.png')"></div>
+    <!-- <iframe src="" frameborder="0" class="data-viz"></iframe> -->
   </div>
 
   {% include scripts.html %}

@@ -3,7 +3,27 @@ window.addEventListener('load', function() {
     // console.log('All assets are loaded');
     removeClass();
     showSlides(slideIndex);
+
 })
+
+
+
+$(window).on("load", () => {
+      $("#progress").addClass("progress");
+      navClickListener();
+});
+
+function navClickListener(){
+      $("nav li a").click(() => {
+        var linkId = $(event.target).attr("href");
+
+        $("nav li a").removeClass();
+        if(linkId != "#title") {
+          $(event.target).addClass("active-nav");
+        }
+
+      });
+}
 
 function removeClass(){
   const slides = [...document.getElementsByClassName("fade")];
@@ -66,6 +86,24 @@ function showSlides(n) {
   }
 }
 
+
+
+
+  window.addEventListener('scroll', () => {
+    // console.log(window.pageYOffset);
+    //console.log(document.body.offsetHeight);
+    // console.log(window.innerHeight);
+    // console.log(document.body.scrollHeight);
+    /*
+var body = document.body,
+    html = document.documentElement;
+
+var height = Math.max( body.scrollHeight, body.offsetHeight,
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+        or just use the jquery
+    */
+    document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.scrollHeight - window.innerHeight));
+  }, false);
 //////
   //import Reveal from '{{ site.baseurl }}/assets/js/reveal.js/dist/reveal.esm.js';
   //import Markdown from '{{ site.baseurl }}/assets/js/reveal.js/plugin/markdown/markdown.esm.js';

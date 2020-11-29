@@ -12,6 +12,7 @@ body, html {
   height: 100%;
 }
 
+
 #title {
   height: 100%;
   min-height: 100vh;
@@ -22,6 +23,7 @@ body, html {
   // filter: grayscale(0.15); NO this is what broke the header
   position: relative;
   text-align: center;
+  opacity: 0.9;
 }
 
 #title h1 {
@@ -37,7 +39,7 @@ body, html {
 
 }
 
-#intro, #context, #sankey {
+#intro, #context, #sankey, #research {
   position: relative; //for the header, refactor
 }
 
@@ -69,7 +71,7 @@ body, html {
     opacity: 1;
   }
 
-#intro {
+#intro, #research {
   background-color: #353d5a;
   color: white;
 }
@@ -171,7 +173,7 @@ body, html {
 }
 
 header {
-  background-color: #771d2e;
+  background-color: #771d2ef7;
   position: fixed;
   top: 0;
   left: 0;
@@ -181,7 +183,7 @@ header {
   align-items: center;
   box-shadow: 0 0 5px 0 black;
   z-index: 2;
-  font-family: "bennet-text-two-regular"
+  // font-family: "bennet-text-two-regular"
   /* margin-bottom: 2em; */
 }
 

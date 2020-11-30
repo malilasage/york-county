@@ -40,6 +40,11 @@ body, html {
   background-color: white;
 }
 
+#conclusion {
+  min-height: 100vh;
+  background-color: #efebe5;
+}
+
 #background .narrative-section {
   // text-align: center;
   //height: 100vh;
@@ -174,7 +179,7 @@ body, html {
 #timeline-wrapper {
   height: 100vh;
   width: 100%;
-  padding: 2em 6em 1em 0;
+  padding: 3em 6em 1em 0;
   background-color: white;
 }
 

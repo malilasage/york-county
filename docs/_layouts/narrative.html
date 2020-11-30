@@ -17,11 +17,10 @@
     {% include head/custom.html %}
 </head>
 <body>
-  <header data-aos="fade-down" data-aos-anchor="#intro" data-aos-anchor-placement="top-center" data-aos-delay="50">
+  <header data-aos="fade" data-aos-anchor="#intro" data-aos-anchor-placement="top-center" data-aos-delay="50">
     <div id="progress"></div>
     <nav>
       <ul>
-        <li><a href="#title">&#9744;</a></li>
         <li><a href="#intro">Intro</a></li>
         <li><a href="#context">Context</a></li>
         <li><a href="#research">Research</a></li>
@@ -34,9 +33,9 @@
   </div>
 
   <div id="intro">
-    <div class="slide">
+    <div class="slide" data-aos="fade-up">
     <h2>Intro</h2>
-    <div class="text-container" data-aos="fade-up">
+    <div class="text-container">
         <p>
           For this project we are studying how the standard of living changed over time in York County Virginia from 1700-1800. The main source we are using is probate records from York County from that time period. Probate records record the items of a person who has recently died and then value the items. The people who recorded probate were appraisers and were often the neighbors of the deceased person. The people in probate records were most often wealthy. If they were not wealthy, they are in the records because of some uncertainties about their possessions. The probate records that we are studying are from York County, Virginia, and range from the years 1700 to 1800. There are 694 people in the records. Some of these people may only have one possession, but others can have more than one hundred. York County is on the Virginia Peninsula, flanked by the York River to the north and the James River to the south. The main settlements in the county are Williamsburg, (which is nowadays an independent city, but in the records was included in York County), and Yorktown.
         </p>
@@ -49,7 +48,12 @@
   </div>
 
   <div class="carousel-container" id="context">
-    <div class="slide carousel-slide"  data-aos="slide-up">
+    <div class="carousel-nav dots">
+      <a class="prev dot" onclick="plusSlides(-1)">&#10094;</a>
+      <div class="dot">1/4</div>
+      <a class="next dot" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="slide carousel-slide" data-aos="fade-up">
       <h2>John Marrott</h2>
       <div class="flex-container">
       <div class="text-container flex-left">
@@ -67,9 +71,9 @@
       </div>
       </div>
     </div>
-    <div class="slide carousel-slide" >
+    <div class="slide carousel-slide">
       <h2>Stephen Besouth</h2>
-      <div class="flex-container" data-aos="slide-left">
+      <div class="flex-container">
       <div class="text-container flex-left">
           <p>
             Let’s compare Marrott with a less wealthy person from the same time period. He is from the least wealthy third of the records. Stephen Besouth only had 21 items in his inventory. Besouth probably lived in Williamsburg several years before he died on April 3rd, 1726. His estate was appraised by John Pasteur, Thomas Dixon and Samuel Cobbs and recorded on July 18th, (Thomas and Tonkin, 1990). Most of his items are associated with his profession, wig making. This includes multiple wigs, hoarse hair, and bleach. Wigs were worn by people of importance, and local businessmen that came into contact with the public, like possibly Besouth himself, (Thomas and Tonkin, 1990).
@@ -143,16 +147,6 @@
       </div>
       </div>
     </div>
-    <div class="carousel-nav">
-      <a class="prev" onclick="plusSlides(-1)">&#9650;</a>
-      <div class="dots">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-      </div>
-      <a class="next" onclick="plusSlides(1)">&#9660;</a>
-    </div>
   </div>
 
   <div id="research">
@@ -174,28 +168,14 @@
 
   <div id="background">
     <div id="sankey">
-      <div id="timeline-wrapper">
-
+      <div id="timeline-wrapper"></div>
     </div>
-    <!-- <div class="wrapper"> -->
-      <!-- <div class="text-box"></div> -->
-    <!-- </div> -->
-    <!-- <div class="data-viz" style="background-image: url('{{ site.baseurl }}/assets/images/sample-context-sankey.png')"></div> -->
-    <!-- <iframe src="" frameborder="0" class="data-viz"></iframe> -->
-    </div>
-    <div class="narrative-section">
+    <div class="narrative-section" data-aos="fade" id="foo">
       <p>
         VHS shoreditch helvetica, af deep v truffaut trust fund bitters chillwave street art live-edge palo santo typewriter enamel pin leggings. Viral swag man braid, cray butcher williamsburg raw denim twee live-edge edison bulb YOLO iceland chambray. Tattooed farm-to-table trust fund affogato, chicharrones health goth hoodie slow-carb church-key keffiyeh heirloom jianbing viral kitsch. Synth leggings pug, la croix pok pok lomo kombucha wayfarers jean shorts unicorn trust fund.
       </p>
     </div>
-    <div class="narrative-section">
-      <p>
-        VHS shoreditch helvetica, af deep v truffaut trust fund bitters chillwave street art live-edge palo santo typewriter enamel pin leggings. Viral swag man braid, cray butcher williamsburg raw denim twee live-edge edison bulb YOLO iceland chambray. Tattooed farm-to-table trust fund affogato, chicharrones health goth hoodie slow-carb church-key keffiyeh heirloom jianbing viral kitsch. Synth leggings pug, la croix pok pok lomo kombucha wayfarers jean shorts unicorn trust fund.
-      </p>
-    </div>
-  </div>
-  <div id="foreground">
-    <div class="narrative-section">
+    <div class="narrative-section" data-aos="fade">
       <p>
         VHS shoreditch helvetica, af deep v truffaut trust fund bitters chillwave street art live-edge palo santo typewriter enamel pin leggings. Viral swag man braid, cray butcher williamsburg raw denim twee live-edge edison bulb YOLO iceland chambray. Tattooed farm-to-table trust fund affogato, chicharrones health goth hoodie slow-carb church-key keffiyeh heirloom jianbing viral kitsch. Synth leggings pug, la croix pok pok lomo kombucha wayfarers jean shorts unicorn trust fund.
       </p>

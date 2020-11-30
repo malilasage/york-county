@@ -104,9 +104,24 @@ body, html {
   transition: opacity 1000ms;
 }
 
+.img-clip {
+  clip-path: inset(15px 5px);
+}
+
+#context figure {
+  align-items: center;
+}
+
+.small-img {
+  width: 50%;
+  height: auto;
+}
+
 .slide {
   margin: 5em;
   position: relative;
+  img {
+  }
 //  opacity: 0;
 //  transition: opacity 1000ms;
   // display: flex;
@@ -155,6 +170,7 @@ body, html {
   background-color: #efebe5;
   .slide {
     margin: 4em;
+    margin-top: 2em;
   }
 }
 
@@ -224,8 +240,9 @@ body, html {
   top: 0;
   width: 100%;
   height: auto;
-  margin-top: 1em;
+  margin-top: 2em;
   text-align: center;
+  // padding-top: 2em;
 
 }
 

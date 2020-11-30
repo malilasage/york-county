@@ -28,6 +28,18 @@ body, html {
   }
 }
 
+#sK {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  height: 100vh;
+}
+
+#sK-wrapper {
+  padding: 2em 6em 3em 1em;
+  background-color: white;
+}
+
 #background .narrative-section {
   // text-align: center;
   //height: 100vh;

@@ -7,9 +7,7 @@ $(window).on("load", () => {
   $("#progress").addClass("progress");
   navClickListener();
   AOS.init({
-    easing: 'ease-in-quart',
-    duration: 600,
-    delay: 50
+    easing: 'ease-in-quart'
   });
   vegaEmbed('#timeline-wrapper', vSpec);
 });
@@ -149,3 +147,137 @@ var vSpec = {
   }],
   "config": {"view": {"stroke": null}}
 };
+
+
+
+/*
+
+try: filter {selection: item } where wealth = Top.
+line 1 = amount where wealth = top and item = chamber pot
+line 2 = amount where wealth = top and item = HH
+x: {field: {repeat: lines}} (or repeat wealth categories)
+https://vega.github.io/vega-lite/docs/field.html
+    "format": {
+      "parse": {
+        "Year": "date:%Y"
+      }
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "date",
+      "axis": {"tickCount": {"interval": "year", "step": 25}}
+      },
+    "y": {"field": "Amount", "type": "quantitative", "title": "price"},
+    "color": {
+      "condition": {
+        "selection": "hover",
+        "field":"Wealth",
+        "type":"nominal",
+        "legend": null
+      },
+      "value": "grey"
+    },
+    "opacity": {
+      "condition": {
+        "selection": "hover",
+        "value": 1
+      },
+      "value": 0.2
+    }
+  },
+  "layer": [{
+    "description": "transparent layer to make it easier to trigger selection",
+    "selection": {
+      "hover": {
+        "type": "single",
+        "on": "mouseover",
+        "empty": "all",
+        "fields": ["Wealth"],
+        "init": {"Wealth": "Top"}
+      }
+    },
+    "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+  }, {
+    "mark": "line"
+  }, {
+    "encoding": {
+      "x": {"field": "Year"},
+      "y": {"field": "Amount"}
+    },
+    "layer": [{
+      "mark": {"type": "circle"}},
+      {
+      "mark": {"type": "text", "align": "left", "dx": 4},
+      "encoding": {"text": {"field":"Wealth", "type": "nominal"}}
+    }]
+  }],
+  "config": {"view": {"stroke": null}}
+}
+///////////
+  "repeat": {
+    "layer": ["Wealth", "Item"]
+  },
+  "spec":{
+    "mark": "line",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "date",
+      "axis": {"tickCount": {"interval": "year", "step": 25}}
+      },
+    "y": {"field": {"repeat": "layer"}, "title": "price"}
+    }
+  },
+  "layer": [{
+    "description": "transparent layer to make it easier to trigger selection",
+    "selection": {
+      "hover": {
+        "type": "single",
+        "on": "mouseover",
+        "empty": "all",
+        "fields": ["Wealth"],
+        "init": {"Wealth": "Top"}
+      }
+    },
+    "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+  },
+  {
+    "mark": "line"
+  }, {
+    "encoding": {
+      "x": {"field": "Year"},
+      "y": {"field": "Amount"}
+    },
+    "layer": [{
+      "mark": {"type": "circle"}},
+      {
+      "mark": {"type": "text", "align": "left", "dx": 4},
+      "encoding": {"text": {"field":"Wealth", "type": "nominal"}}
+    }]
+  }],
+  "config": {"view": {"stroke": null}}
+} lmaooooooo
+
+ "repeat": {"layer": ["Item", "Wealth","Amount"]},
+  "spec": {
+    "mark": "line",
+    "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "date",
+      "axis": {"tickCount": {"interval": "year", "step": 25}}
+      },
+      "y": {
+        "field": "amount", "filter": {"selection": {"repeat": "layer"}},
+        "title": "Mean of US and Worldwide Gross"
+      },
+      "color": {"datum": {"repeat": "layer"}, "type": "nominal"}
+    }
+  }
+}
+*/

@@ -1,3 +1,98 @@
+/*
+narrative box
+<div>
+  <div id="background">
+    <div class="section" id="title">
+      <h1>title</h1>
+    </div>
+    <div class="section" id="1">
+      <h1>1</h1>
+    </div>
+    <div class="section">
+      <h1>2</h1>
+    </div>
+  </div>
+  <div id="foreground">
+    <div class="section">
+      <h1>A</h1>
+    </div>
+    <div class="section" id="B">
+      <h1>B</h1>
+    </div>
+    <div class="section">
+      <h1>C</h1>
+    </div>
+  </div>
+   <div id="background">
+    <div class="section" id="title">
+      <h1>title</h1>
+    </div>
+    <div class="section" id="1">
+      <h1>1</h1>
+    </div>
+    <div class="section">
+      <h1>2</h1>
+    </div>
+  </div>
+    <div id="foreground">
+    <div class="section">
+      <h1>A</h1>
+    </div>
+    <div class="section" id="B">
+      <h1>B</h1>
+    </div>
+    <div class="section">
+      <h1>C</h1>
+    </div>
+  </div>
+</div>
+
+#background {
+/*   height: 100vh; */
+/*   background-color: blue; */
+/*   position: sticky; */
+/*   position: fixed; */
+/*   height: 100%; */
+/*   position: fixed; */
+/*   opacity: 0.6; */
+/*   top: 0; */
+//  width: 100%;
+//}
+
+//#title {
+  //position: sticky;
+  // top: 0;
+// }
+
+//#1 {
+/*   position: sticky; */
+/*   top: 0; */
+//}
+
+// .sticky {
+//   position: sticky;
+// }
+//
+// #background .section {
+//   text-align: center;
+//   height: 200px;
+//   border: 5px dashed black;
+// }
+//
+// #foreground {
+//   background-color: pink;
+//   color: red;
+//   text-align: center;
+//   opacity: 0.8;
+//   height: 100%;
+//   width: 50%;
+// }
+//
+// #foreground .section {
+//   height: 100vh;
+//   border: 2px dashed red;
+// }
+
 $(window).on("load", () => {
   var initSlideIndex = 1;
 
@@ -6,8 +101,10 @@ $(window).on("load", () => {
 
   $("#progress").addClass("progress");
   navClickListener();
-
-  //vegaEmbed('#timeline-wrapper', vSpec);
+  AOS.init({
+    easing: 'ease-in-out-cubic'
+  });
+  vegaEmbed('#timeline-wrapper', vSpec);
 });
 
 function navClickListener(){

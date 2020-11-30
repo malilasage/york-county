@@ -8,6 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon2.png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
@@ -15,7 +17,7 @@
     {% include head/custom.html %}
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down" data-aos-anchor="#intro" data-aos-anchor-placement="top-center" data-aos-delay="50">
     <div id="progress"></div>
     <nav>
       <ul>
@@ -26,15 +28,15 @@
       </ul>
     </nav>
   </header>
-  <div id="title" style="background-image: url('{{ site.baseurl }}/assets/images/4ec851e1114c13cd0678409ea18c6aaa.jpg')">
-    <h1 class="fade">Untitled York County Project</h1>
+  <div id="title" style="background-image: url('{{ site.baseurl }}/assets/images/4ec851e1114c13cd0678409ea18c6aaa.jpg')" class="bG">
+    <h1 data-aos="fade">Untitled York County Project</h1>
     <div id="down">&#8964;</div>
   </div>
 
   <div id="intro">
-    <div class="slide fade">
+    <div class="slide">
     <h2>Intro</h2>
-    <div class="text-container">
+    <div class="text-container" data-aos="fade-up">
         <p>
           For this project we are studying how the standard of living changed over time in York County Virginia from 1700-1800. The main source we are using is probate records from York County from that time period. Probate records record the items of a person who has recently died and then value the items. The people who recorded probate were appraisers and were often the neighbors of the deceased person. The people in probate records were most often wealthy. If they were not wealthy, they are in the records because of some uncertainties about their possessions. The probate records that we are studying are from York County, Virginia, and range from the years 1700 to 1800. There are 694 people in the records. Some of these people may only have one possession, but others can have more than one hundred. York County is on the Virginia Peninsula, flanked by the York River to the north and the James River to the south. The main settlements in the county are Williamsburg, (which is nowadays an independent city, but in the records was included in York County), and Yorktown.
         </p>
@@ -45,8 +47,9 @@
     </div>
     </div>
   </div>
+
   <div class="carousel-container" id="context">
-    <div class="slide fade carousel-slide">
+    <div class="slide carousel-slide"  data-aos="slide-up">
       <h2>John Marrott</h2>
       <div class="flex-container">
       <div class="text-container flex-left">
@@ -64,9 +67,9 @@
       </div>
       </div>
     </div>
-    <div class="slide fade carousel-slide">
+    <div class="slide carousel-slide" >
       <h2>Stephen Besouth</h2>
-      <div class="flex-container">
+      <div class="flex-container" data-aos="slide-left">
       <div class="text-container flex-left">
           <p>
             Let’s compare Marrott with a less wealthy person from the same time period. He is from the least wealthy third of the records. Stephen Besouth only had 21 items in his inventory. Besouth probably lived in Williamsburg several years before he died on April 3rd, 1726. His estate was appraised by John Pasteur, Thomas Dixon and Samuel Cobbs and recorded on July 18th, (Thomas and Tonkin, 1990). Most of his items are associated with his profession, wig making. This includes multiple wigs, hoarse hair, and bleach. Wigs were worn by people of importance, and local businessmen that came into contact with the public, like possibly Besouth himself, (Thomas and Tonkin, 1990).
@@ -151,6 +154,7 @@
       <a class="next" onclick="plusSlides(1)">&#9660;</a>
     </div>
   </div>
+
   <div id="research">
     <div class="slide fade">
       <h2>Research</h2>
@@ -167,8 +171,10 @@
       </div>
     </div>
   </div>
-  <div id="sankey">
-    <div id="timeline-wrapper">
+
+  <div id="background">
+    <div id="sankey">
+      <div id="timeline-wrapper">
 
     </div>
     <!-- <div class="wrapper"> -->
@@ -176,8 +182,25 @@
     <!-- </div> -->
     <!-- <div class="data-viz" style="background-image: url('{{ site.baseurl }}/assets/images/sample-context-sankey.png')"></div> -->
     <!-- <iframe src="" frameborder="0" class="data-viz"></iframe> -->
+    </div>
+    <div class="narrative-section">
+      <p>
+        VHS shoreditch helvetica, af deep v truffaut trust fund bitters chillwave street art live-edge palo santo typewriter enamel pin leggings. Viral swag man braid, cray butcher williamsburg raw denim twee live-edge edison bulb YOLO iceland chambray. Tattooed farm-to-table trust fund affogato, chicharrones health goth hoodie slow-carb church-key keffiyeh heirloom jianbing viral kitsch. Synth leggings pug, la croix pok pok lomo kombucha wayfarers jean shorts unicorn trust fund.
+      </p>
+    </div>
+    <div class="narrative-section">
+      <p>
+        VHS shoreditch helvetica, af deep v truffaut trust fund bitters chillwave street art live-edge palo santo typewriter enamel pin leggings. Viral swag man braid, cray butcher williamsburg raw denim twee live-edge edison bulb YOLO iceland chambray. Tattooed farm-to-table trust fund affogato, chicharrones health goth hoodie slow-carb church-key keffiyeh heirloom jianbing viral kitsch. Synth leggings pug, la croix pok pok lomo kombucha wayfarers jean shorts unicorn trust fund.
+      </p>
+    </div>
   </div>
-
+  <div id="foreground">
+    <div class="narrative-section">
+      <p>
+        VHS shoreditch helvetica, af deep v truffaut trust fund bitters chillwave street art live-edge palo santo typewriter enamel pin leggings. Viral swag man braid, cray butcher williamsburg raw denim twee live-edge edison bulb YOLO iceland chambray. Tattooed farm-to-table trust fund affogato, chicharrones health goth hoodie slow-carb church-key keffiyeh heirloom jianbing viral kitsch. Synth leggings pug, la croix pok pok lomo kombucha wayfarers jean shorts unicorn trust fund.
+      </p>
+    </div>
+  </div>
   {% include scripts.html %}
 </body>
 </html>

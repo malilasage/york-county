@@ -6,6 +6,8 @@ $(window).on("load", () => {
 
   $("#progress").addClass("progress");
   navClickListener();
+
+  //vegaEmbed('#timeline-wrapper', vSpec);
 });
 
 function navClickListener(){
@@ -78,3 +80,68 @@ function showSlides(n) {
 window.addEventListener('scroll', () => {
   document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.scrollHeight - window.innerHeight));
 }, false); //change height access to jquery
+
+var vSpec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": "container",
+  "height": "container",
+  "description": "Google's stock price over time.",
+  "data": {
+    "url": "/york-county/assets/data/trend-test2.json",
+    "format": {
+      "parse": {
+        "Year": "date:%Y"
+      }
+    }
+  },
+  "transform": [{"filter": "datum.Item!=='HH Linens'"}],
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "date",
+      "axis": {"tickCount": {"interval": "year", "step": 25}}
+      },
+    "y": {"field": "Amount", "type": "quantitative", "title": "price"},
+    "color": {
+      "condition": {
+        "selection": "hover",
+        "field":"Item",
+        "type":"nominal",
+        "legend": null
+      },
+      "value": "grey"
+    },
+    "opacity": {
+      "condition": {
+        "selection": "hover",
+        "value": 1
+      },
+      "value": 0.2
+    }
+  },
+  "layer": [{
+    "description": "transparent layer to make it easier to trigger selection",
+    "selection": {
+      "hover": {
+        "type": "single",
+        "on": "mouseover",
+        "empty": "all",
+        "fields": ["Item"],
+        "init": {"Item": "Chamber Pots"}
+      }
+    },
+    "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+  }, {
+    "mark": "line"
+  }, {
+    "encoding": {
+      "x": {"field": "Year"},
+      "y": {"field": "Amount"}
+    },
+    "layer": [{
+      "mark": {"type": "circle"}
+    }]
+  }],
+  "config": {"view": {"stroke": null}}
+};

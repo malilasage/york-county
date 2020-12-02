@@ -183,6 +183,17 @@ body, html {
   background-color: white;
 }
 
+.d3-wrapper {
+  //height: 100vh;
+  background-color: white;
+}
+
+#timelineKL {
+  background-color: white;
+  max-height: 575px;
+  box-shadow: 1px 1px 15px -3px rgba(0,0,0,0.5);
+}
+
 #context {
   background-color: #efebe5;
   .slide {

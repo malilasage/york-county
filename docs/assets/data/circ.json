@@ -1,0 +1,805 @@
+{
+  "name": "inventories",
+  "children": [
+    {
+      "name": "1700-1725",
+      "children": [
+        {
+          "name": "top",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 15
+           },
+           {
+            "name": "Chickens",
+            "value": 2
+           },
+           {
+            "name": "Earthen",
+            "value": 26
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 18
+           },
+           {
+            "name": "Sewing",
+            "value": 11
+           },
+           {
+            "name": "Laundry",
+            "value": 22
+           },
+           {
+            "name": "Dairy",
+            "value": 12
+           },
+           {
+            "name": "Brew",
+            "value": 3
+           },
+           {
+            "name": "HH linens",
+            "value": 34
+           },
+           {
+            "name": "Textile",
+            "value": 20
+           },
+           {
+            "name": "Distill",
+            "value": 11
+           },
+           {
+            "name": "Razor",
+            "value": 9
+           },
+           {
+            "name": "Hunt War",
+            "value": 31
+           },
+           {
+            "name": "Men clothes",
+            "value": 23
+           },
+           {
+            "name": "Women clothes",
+            "value": 8
+           }
+          ]
+        },
+        {
+          "name": "middle",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 13
+           },
+           {
+            "name": "Chickens",
+            "value": 1
+           },
+           {
+            "name": "Earthen",
+            "value": 23
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 11
+           },
+           {
+            "name": "Sewing",
+            "value": 8
+           },
+           {
+            "name": "Laundry",
+            "value": 11
+           },
+           {
+            "name": "Dairy",
+            "value": 4
+           },
+           {
+            "name": "Brew",
+            "value": 0
+           },
+           {
+            "name": "HH linens",
+            "value": 29
+           },
+           {
+            "name": "Textile",
+            "value": 7
+           },
+           {
+            "name": "Distill",
+            "value": 3
+           },
+           {
+            "name": "Razor",
+            "value": 9
+           },
+           {
+            "name": "Hunt War",
+            "value": 21
+           },
+           {
+            "name": "Men clothes",
+            "value": 16
+           },
+           {
+            "name": "Women clothes",
+            "value": 4
+           }
+          ]
+        },
+        {
+          "name": "bottom",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 6
+           },
+           {
+            "name": "Chickens",
+            "value": 1
+           },
+           {
+            "name": "Earthen",
+            "value": 13
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 2
+           },
+           {
+            "name": "Sewing",
+            "value": 4
+           },
+           {
+            "name": "Laundry",
+            "value": 10
+           },
+           {
+            "name": "Dairy",
+            "value": 2
+           },
+           {
+            "name": "Brew",
+            "value": 0
+           },
+           {
+            "name": "HH linens",
+            "value": 23
+           },
+           {
+            "name": "Textile",
+            "value": 6
+           },
+           {
+            "name": "Distill",
+            "value": 0
+           },
+           {
+            "name": "Razor",
+            "value": 4
+           },
+           {
+            "name": "Hunt War",
+            "value": 12
+           },
+           {
+            "name": "Men clothes",
+            "value": 15
+           },
+           {
+            "name": "Women clothes",
+            "value": 8
+           }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "1726-1750",
+      "children": [
+        {
+          "name": "top",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 27
+           },
+           {
+            "name": "Chickens",
+            "value": 1
+           },
+           {
+            "name": "Earthen",
+            "value": 37
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 15
+           },
+           {
+            "name": "Sewing",
+            "value": 6
+           },
+           {
+            "name": "Laundry",
+            "value": 33
+           },
+           {
+            "name": "Dairy",
+            "value": 17
+           },
+           {
+            "name": "Brew",
+            "value": 4
+           },
+           {
+            "name": "HH linens",
+            "value": 45
+           },
+           {
+            "name": "Textile",
+            "value": 14
+           },
+           {
+            "name": "Distill",
+            "value": 15
+           },
+           {
+            "name": "Razor",
+            "value": 11
+           },
+           {
+            "name": "Hunt War",
+            "value": 37
+           },
+           {
+            "name": "Men clothes",
+            "value": 13
+           },
+           {
+            "name": "Women clothes",
+            "value": 2
+           }
+          ]
+        },
+        {
+          "name": "middle",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 20
+           },
+           {
+            "name": "Chickens",
+            "value": 3
+           },
+           {
+            "name": "Earthen",
+            "value": 26
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 15
+           },
+           {
+            "name": "Sewing",
+            "value": 9
+           },
+           {
+            "name": "Laundry",
+            "value": 23
+           },
+           {
+            "name": "Dairy",
+            "value": 10
+           },
+           {
+            "name": "Brew",
+            "value": 1
+           },
+           {
+            "name": "HH linens",
+            "value": 34
+           },
+           {
+            "name": "Textile",
+            "value": 6
+           },
+           {
+            "name": "Distill",
+            "value": 4
+           },
+           {
+            "name": "Razor",
+            "value": 14
+           },
+           {
+            "name": "Hunt War",
+            "value": 30
+           },
+           {
+            "name": "Men clothes",
+            "value": 21
+           },
+           {
+            "name": "Women clothes",
+            "value": 10
+           }
+          ]
+        },
+        {
+          "name": "bottom",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 18
+           },
+           {
+            "name": "Chickens",
+            "value": 3
+           },
+           {
+            "name": "Earthen",
+            "value": 15
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 2
+           },
+           {
+            "name": "Sewing",
+            "value": 7
+           },
+           {
+            "name": "Laundry",
+            "value": 14
+           },
+           {
+            "name": "Dairy",
+            "value": 1
+           },
+           {
+            "name": "Brew",
+            "value": 0
+           },
+           {
+            "name": "HH linens",
+            "value": 26
+           },
+           {
+            "name": "Textile",
+            "value": 5
+           },
+           {
+            "name": "Distill",
+            "value": 1
+           },
+           {
+            "name": "Razor",
+            "value": 5
+           },
+           {
+            "name": "Hunt War",
+            "value": 16
+           },
+           {
+            "name": "Men clothes",
+            "value": 25
+           },
+           {
+            "name": "Women clothes",
+            "value": 5
+           }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "1751-1775",
+      "children": [
+        {
+          "name": "top",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 65
+           },
+           {
+            "name": "Chickens",
+            "value": 8
+           },
+           {
+            "name": "Earthen",
+            "value": 62
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 36
+           },
+           {
+            "name": "Sewing",
+            "value": 8
+           },
+           {
+            "name": "Laundry",
+            "value": 72
+           },
+           {
+            "name": "Dairy",
+            "value": 37
+           },
+           {
+            "name": "Brew",
+            "value": 6
+           },
+           {
+            "name": "HH linens",
+            "value": 91
+           },
+           {
+            "name": "Textile",
+            "value": 27
+           },
+           {
+            "name": "Distill",
+            "value": 17
+           },
+           {
+            "name": "Razor",
+            "value": 22
+           },
+           {
+            "name": "Hunt War",
+            "value": 67
+           },
+           {
+            "name": "Men clothes",
+            "value": 18
+           },
+           {
+            "name": "Women clothes",
+            "value": 4
+           }
+          ]
+        },
+        {
+          "name": "middle",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 60
+           },
+           {
+            "name": "Chickens",
+            "value": 5
+           },
+           {
+            "name": "Earthen",
+            "value": 53
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 19
+           },
+           {
+            "name": "Sewing",
+            "value": 5
+           },
+           {
+            "name": "Laundry",
+            "value": 50
+           },
+           {
+            "name": "Dairy",
+            "value": 11
+           },
+           {
+            "name": "Brew",
+            "value": 2
+           },
+           {
+            "name": "HH linens",
+            "value": 60
+           },
+           {
+            "name": "Textile",
+            "value": 11
+           },
+           {
+            "name": "Distill",
+            "value": 6
+           },
+           {
+            "name": "Razor",
+            "value": 22
+           },
+           {
+            "name": "Hunt War",
+            "value": 53
+           },
+           {
+            "name": "Men clothes",
+            "value": 22
+           },
+           {
+            "name": "Women clothes",
+            "value": 1
+           }
+          ]
+        },
+        {
+          "name": "bottom",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 42
+           },
+           {
+            "name": "Chickens",
+            "value": 11
+           },
+           {
+            "name": "Earthen",
+            "value": 37
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 7
+           },
+           {
+            "name": "Sewing",
+            "value": 4
+           },
+           {
+            "name": "Laundry",
+            "value": 33
+           },
+           {
+            "name": "Dairy",
+            "value": 6
+           },
+           {
+            "name": "Brew",
+            "value": 0
+           },
+           {
+            "name": "HH linens",
+            "value": 58
+           },
+           {
+            "name": "Textile",
+            "value": 8
+           },
+           {
+            "name": "Distill",
+            "value": 1
+           },
+           {
+            "name": "Razor",
+            "value": 16
+           },
+           {
+            "name": "Hunt War",
+            "value": 43
+           },
+           {
+            "name": "Men clothes",
+            "value": 29
+           },
+           {
+            "name": "Women clothes",
+            "value": 5
+           }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "1776-1800",
+      "children": [
+        {
+          "name": "top",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 27
+           },
+           {
+            "name": "Chickens",
+            "value": 4
+           },
+           {
+            "name": "Earthen",
+            "value": 13
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 7
+           },
+           {
+            "name": "Sewing",
+            "value": 5
+           },
+           {
+            "name": "Laundry",
+            "value": 18
+           },
+           {
+            "name": "Dairy",
+            "value": 19
+           },
+           {
+            "name": "Brew",
+            "value": 3
+           },
+           {
+            "name": "HH linens",
+            "value": 26
+           },
+           {
+            "name": "Textile",
+            "value": 5
+           },
+           {
+            "name": "Distill",
+            "value": 4
+           },
+           {
+            "name": "Razor",
+            "value": 6
+           },
+           {
+            "name": "Hunt War",
+            "value": 20
+           },
+           {
+            "name": "Men clothes",
+            "value": 3
+           },
+           {
+            "name": "Women clothes",
+            "value": 2
+           }
+          ]
+        },
+        {
+          "name": "middle",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 22
+           },
+           {
+            "name": "Chickens",
+            "value": 2
+           },
+           {
+            "name": "Earthen",
+            "value": 15
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 6
+           },
+           {
+            "name": "Sewing",
+            "value": 4
+           },
+           {
+            "name": "Laundry",
+            "value": 20
+           },
+           {
+            "name": "Dairy",
+            "value": 7
+           },
+           {
+            "name": "Brew",
+            "value": 0
+           },
+           {
+            "name": "HH linens",
+            "value": 19
+           },
+           {
+            "name": "Textile",
+            "value": 6
+           },
+           {
+            "name": "Distill",
+            "value": 1
+           },
+           {
+            "name": "Razor",
+            "value": 10
+           },
+           {
+            "name": "Hunt War",
+            "value": 18
+           },
+           {
+            "name": "Men clothes",
+            "value": 6
+           },
+           {
+            "name": "Women clothes",
+            "value": 4
+           }
+          ]
+        },
+        {
+          "name": "bottom",
+          "children": [
+           {
+            "name": "Spinning",
+            "value": 23
+           },
+           {
+            "name": "Chickens",
+            "value": 4
+           },
+           {
+            "name": "Earthen",
+            "value": 17
+           },
+           {
+            "name": "Chamber Pots",
+            "value": 2
+           },
+           {
+            "name": "Sewing",
+            "value": 4
+           },
+           {
+            "name": "Laundry",
+            "value": 19
+           },
+           {
+            "name": "Dairy",
+            "value": 7
+           },
+           {
+            "name": "Brew",
+            "value": 0
+           },
+           {
+            "name": "HH linens",
+            "value": 10
+           },
+           {
+            "name": "Textile",
+            "value": 6
+           },
+           {
+            "name": "Distill",
+            "value": 1
+           },
+           {
+            "name": "Razor",
+            "value": 8
+           },
+           {
+            "name": "Hunt War",
+            "value": 14
+           },
+           {
+            "name": "Men clothes",
+            "value": 6
+           },
+           {
+            "name": "Women clothes",
+            "value": 1
+           }
+          ]
+        }
+      ]
+    }
+  ]
+}

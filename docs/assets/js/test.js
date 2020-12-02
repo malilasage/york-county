@@ -10,7 +10,7 @@ $(window).on("load", () => {
     easing: 'ease-in-quart'
   });
   vegaEmbed('#timeline-wrapper', vSpec);
-  // main();
+  main();
 });
 
 function navClickListener(){
@@ -152,6 +152,16 @@ function _chart(data, width, height, pack, color, format) {
         .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
         .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
   }
+
+  /*d3.select("#circ")
+    .on("click", function(event) {
+      console.log("loaded");
+      var mEvent = event;
+      //svg.dispatch("click", (mEvent) => {
+              console.log(mEvent);
+        svg.dispatch(zoom(mEvent, root.children[2])); //this works, styling sux tho
+      // });
+    })*/
 
   return svg.node();
 }

@@ -184,8 +184,20 @@ body, html {
 }
 
 .d3-wrapper {
-  //height: 100vh;
+  height: 100vh;
   background-color: white;
+}
+
+#r2 {
+
+}
+
+#circ {
+  background-color: #efebe5;
+  min-height: 100vh;
+  position: sticky;
+  background-color: white;
+  top: 0;
 }
 
 #timelineKL {

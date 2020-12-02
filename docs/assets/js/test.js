@@ -10,7 +10,7 @@ $(window).on("load", () => {
     easing: 'ease-in-quart'
   });
   vegaEmbed('#timeline-wrapper', vSpec);
-  main();
+  //main();
 });
 
 function navClickListener(){

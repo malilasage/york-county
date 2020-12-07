@@ -13,10 +13,9 @@ $(window).on("load", () => {
   //initSankey();
   // initNarrative();
   var initialized = false;
-  document.addEventListener('aos:in', ({ detail }) => {
-    console.log('animated in', detail);
+  document.addEventListener('aos:in', ({ detail }) => {//change to specific animation?
+
     var eleId = $(detail).attr("id");
-    console.log(eleId);
     if(eleId === "sK-wrapper" && !initialized) {
       initSankey();
       initialized = true;

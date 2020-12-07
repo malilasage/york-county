@@ -72,6 +72,7 @@ defaults:
 markdown: kramdown
 #theme: minima
 remote_theme: "mmistakes/minimal-mistakes@4.21.0"
+minimal_mistakes_skin: "dark"
 plugins:
   - jekyll-feed
   - jekyll-include-cache

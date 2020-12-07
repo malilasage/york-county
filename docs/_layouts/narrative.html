@@ -1,4 +1,5 @@
 ---
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +22,21 @@
     <div id="progress"></div>
     <nav>
       <ul>
-        <li><a href="#intro">Intro</a></li>
-        <li><a href="#context">Context</a></li>
-        <li><a href="#research">Research</a></li>
+        <li><a href="#title">Home</a></li>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#context">Life in York County</a></li>
+        <li><a href="#research">The Inventories</a></li>
+        <li><a href="#r2">Material Culture</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li class="dropdown">
+          <button class="dropbtn"><i class="fas fa-bars"></i>
+          </button>
+          <div class="dropdown-content">
+            {%- for link in site.data.navigation.main -%}
+              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+            {%- endfor -%}
+          </div>
+        </li>
       </ul>
     </nav>
   </header>
@@ -40,8 +53,9 @@
         <p>
           For this project we are studying how the standard of living changed over time in York County Virginia from 1700-1800. The main source we are using is probate records from York County from that time period. Probate records record the items of a person who has recently died and then value the items. The people who recorded probate were appraisers and were often the neighbors of the deceased person. The people in probate records were most often wealthy. If they were not wealthy, they are in the records because of some uncertainties about their possessions. The probate records that we are studying are from York County, Virginia, and range from the years 1700 to 1800. There are 694 people in the records. Some of these people may only have one possession, but others can have more than one hundred. York County is on the Virginia Peninsula, flanked by the York River to the north and the James River to the south. The main settlements in the county are Williamsburg, (which is nowadays an independent city, but in the records was included in York County), and Yorktown.
         </p>
-        <img src="{{ site.baseurl }}/assets/images/york-county-deaths.png" class="align-center" alt="">
+        <!-- <img src="{{ site.baseurl }}/assets/images/york-county-deaths.png" class="align-center" alt=""> -->
         <p>
+          <img src="{{ site.baseurl }}/assets/images/york-county-deaths.png" class="align-right small-img" alt="">
           The years 1700-1800 are significant in this area because of the Revolutionary War and related conflicts, the industrial revolution, and a smallpox epidemic. What we are looking at in the records is the least wealthy third of the people included. We want to if, how, and possibly why the possessions of the least wealthy third in the dataset changed over time. The sources we are using are mainly the essay “Unwritten Rules and Gendered Frames Amongst Probate Appraisers? Evidence From 18th Century York County, Virginia” by Wendy Lucas and Noel Campbell. This is an important resource because it uses the same data set that we are using, and they actually made the spreadsheet that we are using, with the extra information that they added. We also interviewed one of the authors of that paper, Wendy Lucas. The other main resource that we are using is the Colonial Williamsburg website and its resources.
         </p>
         <div id="timelineKL">
@@ -52,14 +66,13 @@
   </div>
 
   <div class="carousel-container even" id="context">
-    <div class="carousel-nav dots">
+    <div class="carousel-nav">
       <a class="prev dot" onclick="plusSlides(-1)">&#10094;</a>
-      <div class="dot" id="dot">1/4</div>
+      <div class="dot" id="dot">1 / 4</div>
       <a class="next dot" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <div class="slide carousel-slide" data-aos="fade-up">
       <h2>John Marrott</h2>
-      <!-- <img src="{{ site.baseurl }}/assets/images/thumbnail_second-context.jpg" alt="" class="img-clip align-center"> -->
       <div class="flex-container">
       <div class="text-container flex-left">
         <img src="{{ site.baseurl }}/assets/images/thumbnail_second-context.jpg" alt="" class="img-clip align-center">
@@ -250,7 +263,7 @@
 
   <div id="r2">
     <!-- <div class ="slide">
-
+      <h2>Changing Material Culture/Trends in Consumerism</h2>
     </div> -->
   </div>
 

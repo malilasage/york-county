@@ -19,6 +19,8 @@ TOC:
 fonts: "kings-caslon-display", "bennet-text-one"
 colors: #741e2f, #353d5a
 */
+$blue: #353d5a;
+$white: #efebe5;;
 
 //site wide
 body, html {
@@ -51,8 +53,12 @@ header {
     display: inline;
   }
 
+  nav {
+    width: 100%;
+  }
+
   li {
-    margin: 1em;
+    margin-left: 1em;
 
     a {
       color: white;
@@ -64,10 +70,47 @@ header {
         color: white;
       }
       &:hover {
+        color: white;
         text-shadow: 0px 0px 1px rgba(225, 225, 225, 1);
       }
     }
   }
+}
+
+.dropdown {
+  float: right;
+  margin-right: 1em;
+  .dropbtn {
+    background-color: inherit;
+    color: white;
+    border: none;
+    margin-left: 2em;
+  }
+
+  overflow: hidden;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $white;
+  //min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 2px;
+  margin-right: 0.2em;
+
+  a, a:hover, a:visited {
+    display: block;
+    color: #3d4144;
+    padding: 0.5em;
+  }
+  a:hover {
+    color: #151618;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .active-nav {
@@ -142,20 +185,23 @@ header {
 }
 
 .odd {
-  background-color: #353d5a;
+  background-color: $blue;
   color: white;
 }
 
 .even {
-  background-color: #efebe5;
+  background-color: $white;
+  img {
+      box-shadow: 1px 1px 15px -3px rgba(0,0,0,0.5);
+  }
 }
 
 .slide {
-  margin: 5em;
+  margin-bottom: 4em;
+  margin-top: 2em;
+  margin-left: 8em;
+  margin-right: 8em;
   position: relative;
-  img {
-
-  }
 
   h2 {
     width: 100%;
@@ -189,27 +235,49 @@ header {
 }
 
 //carousel
-.numbertext {//i don't think this is used anywhere
-  color: black;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
+.carousel-nav {
+  padding-top: 4em;
+  text-align: center;
+  display: inline-block;
+  padding-right: 1em;
+  float: right;
+  position: sticky;
   top: 0;
 }
 
-#context {
-  position: relative;
-  background-color: #efebe5;
+.prev, .next {
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 2px 2px 2px 2px;
+}
 
-  .slide {
-    margin-bottom: 4em;
-    margin-top: 2em;
-    margin-left: 8em;
-    margin-right: 8em;
-  }
+.prev, .next, .dot {
+  display: inline-block;
+  padding: 2px;
+  margin-right: 8px;
+  color: black;
+  opacity: 0.75;
+  font-size: 18px;
+  user-select: none;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+.carousel-container {
+  position: relative;
+  align-items: center;
+
   figure {
     align-items: center;
   }
+}
+
+.carousel-slide {
+  display: none;
 }
 
 .side-bar {
@@ -220,82 +288,7 @@ header {
     width: 100%;
     height: auto;
     margin-left: 2em;
-    // clip-path: rectangle(50%);
   }
-}
-
-.carousel-nav {
-  // position: sticky;
-  // top: 25%;
-  // width: 2em;
-  // padding-bottom: 25%;
-  // margin-right: 1em;
-
-  top: 0;
-  width: 100%;
-  height: auto;
-  margin-top: 2em;
-  text-align: center;
-  // padding-top: 2em;
-
-}
-
-.prev, .next {
-  cursor: pointer;
-  // position: absolute;
-  top: 50%;
-  width: auto;
-  // margin-top: -22px;
-  padding: 8px;
-  color: black;
-  opacity: 0.75;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 2px 2px 2px 2px;
-  user-select: none;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-}
-
-.carousel-container {
-  // position: relative;
-  // display: -webkit-flex;
-  // display: flex;
-  align-items: center;
-}
-
-.carousel-slide {
-  display: none;
-}
-
-.next {
-  // right: 0;
-  //border-radius: 2px 2 0 3px;
-}
-
-.dot { //this is used by the carousel nav
-  cursor: pointer;
-  // height: 10px;
-  //width: 10px;
-  // margin: 10px 10px;
-  //background-color: #bbb;
-  //border-radius: 50%;
-  display: inline-block;
-  // transition: background-color 0.6s ease;
-  padding: 0.1em;
-}
-
-.active, .dot:hover {
-  // background-color: #717171;
-}
-
-.dots {
-  // padding-bottom: 1em;
-  // text-align:center;
 }
 
 //data viz

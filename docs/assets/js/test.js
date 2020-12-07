@@ -1,7 +1,6 @@
 $(window).on("load", () => {
   var initSlideIndex = 1;
 
-  removeClass();
   showSlides(initSlideIndex);
 
   $("#progress").addClass("progress");
@@ -11,6 +10,7 @@ $(window).on("load", () => {
   });
   vegaEmbed('#timeline-wrapper', vSpec);
   //main();
+
 });
 
 function navClickListener(){
@@ -22,32 +22,6 @@ function navClickListener(){
     }
   });
 }
-
-function removeClass(){
-  const slides = [...document.getElementsByClassName("fade")];
-    let options = {
-      rootMargin: "0px",
-      threshold: 0.25
-    };
-
-    const callback = (entries, observer) => {
-      entries.forEach(entry => {
-    		const { target } = entry;
-
-    		if (entry.intersectionRatio >= 0.25) {
-    			target.classList.add("is-visible");
-    		} else {
-    			target.classList.remove("is-visible");
-    		}
-      });
-    };
-
-    const observer = new IntersectionObserver(callback, options);
-
-    slides.forEach((slide, index) => {
-      observer.observe(slide);
-    });
-};
 
 var slideIndex = 1;
 

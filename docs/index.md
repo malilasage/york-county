@@ -1,6 +1,8 @@
 ---
 layout: narrative
 title: "York County Estates"
+#toc: true
+#toc_sticky: true
 ---
 
 

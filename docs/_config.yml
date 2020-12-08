@@ -39,7 +39,7 @@ head_scripts:
 #  - https://cdn.jsdelivr.net/npm/vega@5.17.0
 #  - https://cdn.jsdelivr.net/npm/vega-lite@4.17.0
 #  - https://cdn.jsdelivr.net/npm/vega-embed@6.12.2
-  - /assets/js/test.js
+#  - /assets/js/test.js
 
 collections:
   research:

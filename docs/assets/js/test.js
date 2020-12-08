@@ -1,6 +1,6 @@
 $(window).on("load", () => {
   var initSlideIndex = 1;
-
+  hello();
   showSlides(initSlideIndex);
 
   $("#progress").addClass("progress");
@@ -12,15 +12,36 @@ $(window).on("load", () => {
   //main();
   //initSankey();
   // initNarrative();
-  var initialized = false;
+  var marrottData = "/york-county/assets/data/marrott-data.csv";
+  var besouthData = "/york-county/assets/data/besouth-data.csv"
+  // var initialized = false;
   document.addEventListener('aos:in', ({ detail }) => {//change to specific animation?
-
-    var eleId = $(detail).attr("id");
-    if(eleId === "sK-wrapper" && !initialized) {
-      initSankey();
-      initialized = true;
+    console.log(detail);
+    var dataId = $(detail).attr("data-index");
+    if(dataId) {
+      console.log(dataId);
+      // if(dataId != 0) {
+      //           clean("svg").then(() => {
+      //   initSankey(dataFunctions[dataId]);
+      //         });
+      // }
+      // else {
+      //   initSankey(dataFunctions[dataId]);
+      //   // dataFunctions[dataId];
+      // }
+                clean("svg").then(() => {
+        initSankey(dataFunctions[dataId]);
+              });
     }
+    // var eleId = $(detail).attr("id");
+    // if(eleId === "sK-wrapper" && !initialized) {
+    //   initSankey(besouthData);
+    //   initialized = true;
+    // }
   });
+
+  var dataFunctions = ["/york-county/assets/data/marrott-data.csv", "/york-county/assets/data/besouth-data.csv"];
+
 });
 
 function initNarrative() {
@@ -247,7 +268,8 @@ svg.append("g")
     .selectAll("g")
     .data(links)
     .join("g")
-    .attr("stroke", d => d3.color(d.color));
+    .attr("stroke", d => d3.color(d.color))
+    .attr("stroke-dasharray", d => {return d.target.name === "Damaged" ? "10,1" : null;});
     // .attr("stroke-width", "5px");
 
   link.append("path")
@@ -279,7 +301,7 @@ svg.append("g")
         .duration(tDuration)
         .attr("x", d => d.x0 < width / 2 ? d.x1 + 6 : d.x0 - 6)
         .attr("y", d => (d.y1 + d.y0) / 2)
-        .style("font-size", "12px")
+        .style("font-size", "18px")
         .on("end", appendVal());
       /*.text(d => {
               const parseFloat = d3.format(",.0f");
@@ -352,8 +374,8 @@ function _parseSData(dataFile) { //async?
 
 }
 
-async function _sData() {
-  return fetch("/york-county/assets/data/marrott-data.csv").then((response) => {
+async function _sData(file) {
+  return fetch(file).then((response) => {
     return response.text();
   });
 }
@@ -373,6 +395,7 @@ function _sColors() {
    "Hunt/War": "#fd8d3c",
    "Bed": "#fc4e2a",
    "Furniture": "#e31a1c",
+   "Razor": "#bd0026",
    "Seating": "#bd0026",
    "Cookware": "#e31a1c",
    "Interior Lighting": "#fc4e2a",
@@ -386,19 +409,33 @@ function _sColors() {
    "Specialized Tool": "#74a9cf",
    "Food": "#3690c0",
    "Alcohol": "#0570b0",
-   "Silver Plate": "#045a8d"
+   "Men Clothes": "#0570b0",
+   "Silver Plate": "#045a8d",
+   "Damaged": "#9a9a9a"
   }
   return colors;
 }
 
-async function initSankey() {
+async function initSankey(file) {
+  console.log("initialized");
   const width = 954;
   const height = 700;
-  const tDuration = 3000;
-  const data = await _sData();
+  const tDuration = 2000;
+  const data = await _sData(file);
   const parsed = await _parseSData(data);
   const sankey = _sankey(width, height);
   const chart = _sChart(width, height, parsed, sankey, tDuration);
+}
+
+async function clean(chart) {
+  var svg = d3.select("#sK-wrapper").select("svg");
+
+  await svg.transition()
+    .duration(2000)
+    .attr("opacity", 0)
+    .end();
+
+    svg.remove();
 }
 
 ////end sankey

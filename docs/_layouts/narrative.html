@@ -215,13 +215,13 @@
         <!-- <img src="{{ site.baseurl }}/assets/images/flow-o-matic3.png" alt=""> -->
       </div>
     </div>
-    <div class="narrative-section" data-aos="fade" id="foo">
+    <div class="narrative-section" onClick="clean('svg')" data-aos="fade" id="foo" data-index="0">
       <h4>The Inventory of John Marrott</h4>
       <p>
         This chart shows the estimated financial value of John Marrott's estate at the time of his death. The value is broken down into categories, followed by the cost of the individual items. The ownership of slaves and silver plate signify his economic status as a wealthy member of York County. Some possessions may have been left out of the inventory by the appraisers, as it was common practice to omit some items for the use of the deceased's widow.
       </p>
     </div>
-    <div class="narrative-section" data-aos="fade">
+    <div class="narrative-section" data-aos="fade" data-index="1">
       <p>
         VHS shoreditch helvetica, af deep v truffaut trust fund bitters chillwave street art live-edge palo santo typewriter enamel pin leggings. Viral swag man braid, cray butcher williamsburg raw denim twee live-edge edison bulb YOLO iceland chambray. Tattooed farm-to-table trust fund affogato, chicharrones health goth hoodie slow-carb church-key keffiyeh heirloom jianbing viral kitsch. Synth leggings pug, la croix pok pok lomo kombucha wayfarers jean shorts unicorn trust fund.
       </p>
@@ -323,7 +323,9 @@
     </div>
   </div>
 
-
+  {% for javascript in page.custom-javascript %}
+    <script src="{{ site.baseurl }}/{{ javascript }}"></script>
+{% endfor %}
   {% include scripts.html %}
 </body>
 </html>

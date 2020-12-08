@@ -215,7 +215,7 @@
         <!-- <img src="{{ site.baseurl }}/assets/images/flow-o-matic3.png" alt=""> -->
       </div>
     </div>
-    <div class="narrative-section" onClick="clean('svg')" data-aos="fade" id="foo" data-index="0">
+    <div class="narrative-section" data-aos="fade" id="foo" data-index="0">
       <h4>The Inventory of John Marrott</h4>
       <p>
         This chart shows the estimated financial value of John Marrott's estate at the time of his death. The value is broken down into categories, followed by the cost of the individual items. The ownership of slaves and silver plate signify his economic status as a wealthy member of York County. Some possessions may have been left out of the inventory by the appraisers, as it was common practice to omit some items for the use of the deceased's widow.
@@ -256,9 +256,9 @@
 
   <div id="background">
     <div id="circ">
-      <!-- <div class="d3-wrapper" id="chart">
+      <div class="d3-wrapper" id="chart">
 
-      </div> -->
+      </div>
               <img src="{{ site.baseurl }}/assets/images/chart.png" alt="">
       <div>
 
@@ -325,7 +325,7 @@
 
   {% for javascript in page.custom-javascript %}
     <script src="{{ site.baseurl }}/{{ javascript }}"></script>
-{% endfor %}
+  {% endfor %}
   {% include scripts.html %}
 </body>
 </html>

@@ -6,6 +6,11 @@ $(window).on("load", () => {
     easing: 'ease-in-quart'
   });
 
+  //progress bar
+  window.addEventListener('scroll', () => {
+    document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.scrollHeight - window.innerHeight));
+  }, false); //change height access to jquery
+
   //carousel
   var initSlideIndex = 1;
   showSlides(initSlideIndex);
@@ -13,20 +18,15 @@ $(window).on("load", () => {
   //data vizualizations
   var sankeyData = ["/york-county/assets/data/marrott-data.csv", "/york-county/assets/data/besouth-data.csv"];
 
-  document.addEventListener('aos:in', ({ detail }) => {//change to specific animation?
-    console.log(detail);
+  document.addEventListener('aos:in', ({ detail }) => {
     var dataId = $(detail).attr("data-index");
-    if(dataId) {
-      if(dataId != 0) {
-        initSankey(sankeyData[dataId]);
-      } else {
-        clean("svg").then(() => {
-          initSankey(sankeyData[dataId]);
-        });
-      }
-
-    }
+     if(dataId) {
+       clean("svg").then(() => {
+         initSankey(sankeyData[dataId]);
+       });
+     }
   });
+
 
   vegaEmbed('#timeline-wrapper', vSpec);
   // main();
@@ -76,10 +76,7 @@ function showSlides(n) {
   }
 }
 
-//progress bar
-window.addEventListener('scroll', () => {
-  document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.scrollHeight - window.innerHeight));
-}, false); //change height access to jquery
+
 
 
 //remove d3 vizualizations

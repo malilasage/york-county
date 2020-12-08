@@ -27,6 +27,7 @@ body, html {
   height: 100%;
 }
 
+
 .flex-right {
   flex: 30%;
 }
@@ -157,15 +158,32 @@ header {
   text-align: center;
   // opacity: 0.8;
   z-index: -1;
+  .hgroup {
+        position: fixed;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+            // font-size: 4em;
+            // font-family: "kings-caslon-bold";
+  }
   h1 {
-    position: fixed;
-    display: block;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: fixed;
+    // display: block;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    margin: 0;
     font-size: 4em;
     font-family: "kings-caslon-bold";
+
   }
+      p {
+        margin: 0;
+        font-size: 1.5em;
+            font-family: "kings-caslon-bold";
+      }
   .down-arrow {
     bottom: 0;
     position: fixed;
@@ -173,7 +191,7 @@ header {
     padding-bottom: 0.2em;
     font-size: 5em;
   }
-  h1, .down-arrow {
+  h1, .down-arrow, p {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
     color: #040202;
   }

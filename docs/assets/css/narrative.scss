@@ -1,6 +1,5 @@
 ---
 ---
-//add favicon attribution "House by Naomi Atkinson from the Noun Project" ? will probs change
 @charset "utf-8";
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes";
@@ -20,9 +19,7 @@ fonts: "kings-caslon-display", "bennet-text-one"
 colors: #741e2f, #353d5a
 */
 $blue: #353d5a;
-$white: #efebe5;;
-
-$aos-distance: 500px;
+$white: #efebe5;
 
 //site wide
 body, html {
@@ -192,6 +189,7 @@ header {
     width: 100%;
     padding-bottom: 0.2em;
     font-size: 5em;
+    cursor: pointer;
   }
   h1, .down-arrow, p {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);

@@ -8,13 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <!-- <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon2.png"> -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/narrative.css">
-  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script> -->
+
   {% include head.html %}
     {% include head/custom.html %}
 </head>
@@ -48,6 +44,7 @@
     </div>
 
     <div class="down-arrow" data-aos="fade">&#8964;</div>
+    <!-- <a href="#intro" class="down-arrow">&#8964;</a> -->
   </div>
 
   <div id="intro" class="slide-wrapper odd">
@@ -321,6 +318,13 @@
     <div class="text-container">
     </div>
     </div>
+  </div>
+
+  <div class="page__footer">
+    <footer>
+      {% include footer/custom.html %}
+      {% include footer.html %}
+    </footer>
   </div>
 
   {% for javascript in page.custom-javascript %}

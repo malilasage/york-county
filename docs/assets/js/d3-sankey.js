@@ -182,3 +182,16 @@ async function initSankey(file) {
   const sankey = _sankey(width, height);
   const chart = _sChart(width, height, parsed, sankey, tDuration);
 }
+
+function draw1(file) {
+  console.log("drawing 1");
+  initSankey(file);
+}
+function draw2(file) {
+  console.log("drawing 2");
+  d3.select("svg")
+    .selectAll("g")
+    .lower()
+
+  initSankey(file);
+}

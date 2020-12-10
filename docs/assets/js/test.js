@@ -4,34 +4,75 @@ $(window).on("load", () => {
 
   AOS.init({
     easing: 'ease-in-quart'
+    // offset: 720
   });
 
   //progress bar
-  window.addEventListener('scroll', () => {
-    document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.scrollHeight - window.innerHeight));
-  }, false); //change height access to jquery
+  $(window).scroll(() => {
+    $("body").get(0).style.setProperty("--scroll", $(window).scrollTop() / ($("body")[0].scrollHeight - $(window).innerHeight()));
+  })
 
   //carousel
   var initSlideIndex = 1;
   showSlides(initSlideIndex);
 
   //data vizualizations
-  var sankeyData = ["/york-county/assets/data/marrott-data.csv", "/york-county/assets/data/besouth-data.csv"];
+  const sankeyData = ["/york-county/assets/data/marrott-data.csv", "/york-county/assets/data/besouth-data.csv"];
 
-  document.addEventListener('aos:in', ({ detail }) => {
-    var dataId = $(detail).attr("data-index");
-     if(dataId) {
-       clean("svg").then(() => {
-         initSankey(sankeyData[dataId]);
-       });
-     }
+  var currentSection;
+
+  document.addEventListener('aos:in:foo', ({ detail }) => {
+    var id = $(detail).attr('data-index');
+
+    if(id != currentSection) {
+      currentSection = id;
+      clean("svg").then(() => {
+        initSankey(sankeyData[id]);
+      }).catch((err) => {
+        console.log(err);
+      })
+    }
   });
-
 
   vegaEmbed('#timeline-wrapper', vSpec);
   // main();
 
 });
+
+
+
+
+
+
+var navLinks = $('nav > ul > li > a');
+var sections = $($(".section").get().reverse());
+var sectionToNavLink = {};
+
+sections.each(function() {
+  var id = $(this).attr('id');
+  sectionToNavLink[id] = $('nav > ul > li > a[href=\\#' + id + ']');
+});
+
+function highlightNav() {
+  var scrollPosition = $(window).scrollTop();
+
+  sections.each(function() {
+    var currentSection = $(this);
+    var sectionTop = currentSection.offset().top;
+
+    if (scrollPosition >= sectionTop) {
+      var id = currentSection.attr('id');
+      var navLink = sectionToNavLink[id];
+
+      if (!navLink.hasClass('active-nav')) {
+        navLinks.removeClass('active-nav');
+        navLink.addClass('active-nav');
+      }
+      return false;
+    }
+  });
+}
+$(window).scroll(highlightNav);
 
 
 function navClickListener(){
@@ -84,11 +125,12 @@ async function clean(chart) {
   var svg = d3.select("#sK-wrapper").select("svg");
 
   await svg.transition()
-    .duration(2000)
-    .attr("opacity", 0)
-    .end();
+    .duration(500)
+    .style("opacity", 0)
+    .remove();
+    // .end();
 
-    svg.remove();
+    // svg.remove();
 }
 
 

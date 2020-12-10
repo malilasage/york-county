@@ -114,7 +114,8 @@ header {
 }
 
 .active-nav {
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid #ffffffde;
+  transition: all 0.3s ease-out;
 }
 
 #progress {

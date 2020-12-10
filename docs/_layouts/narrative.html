@@ -47,7 +47,7 @@
     <!-- <a href="#intro" class="down-arrow">&#8964;</a> -->
   </div>
 
-  <div id="intro" class="slide-wrapper odd">
+  <div id="intro" class="slide-wrapper odd section">
     <div class="slide" data-aos="fade-up">
     <h2>Introduction</h2>
     <!-- <img src="{{ site.baseurl }}/assets/images/estate-record.jpg" alt="estate inventory 1782"> -->
@@ -74,7 +74,7 @@
     </div>
   </div>
 
-  <div class="carousel-container even" id="context">
+  <div class="carousel-container even section" id="context">
     <div class="carousel-nav">
       <a class="prev dot" onclick="plusSlides(-1)">&#10094;</a>
       <div class="dot" id="dot">1 / 4</div>
@@ -206,26 +206,32 @@
     </div>
   </div>
 
-  <div id="background">
-    <div id="sK" >
-      <div id="sK-wrapper" data-aos="fade">
+  <div id="background" class="dv" data-aos-id="foo" data-aos-anchor-placement="top-top" data-aos-offset="940">
+    <div id="sK">
+      <div id="sK-wrapper">
         <!-- <img src="{{ site.baseurl }}/assets/images/flow-o-matic3.png" alt=""> -->
       </div>
     </div>
-    <div class="narrative-section" data-aos="fade-in-out" data-aos-id="foo" data-index="0">
+    <div
+    class="narrative-section step"
+    data-aos="fade-in-out" data-index="0"
+    data-aos-id="foo" data-aos-anchor-placement="top-center" data-aos-offset="840">
+    <!-- data-aos-offset="200"> -->
+<!-- > -->
       <h4>The Inventory of John Marrott</h4>
       <p>
         This chart shows the estimated financial value of John Marrott's estate at the time of his death. The value is broken down into categories, followed by the cost of the individual items. The ownership of slaves and silver plate signify his economic status as a wealthy member of York County. Some possessions may have been left out of the inventory by the appraisers, as it was common practice to omit some items for the use of the deceased's widow.
       </p>
     </div>
-    <div class="narrative-section" data-aos="fade" data-index="1">
+    <!-- <div data-aos="fade" data-aos-id="bar" data-aos-anchor="#baz" data-index="0" data-aos-anchor-placement="top-bottom"></div> -->
+    <div class="narrative-section step" data-aos="fade" data-index="1" data-aos-id="foo" data-aos-anchor-placement="top-center" data-aos-offset="840">
       <p>
         VHS shoreditch helvetica, af deep v truffaut trust fund bitters chillwave street art live-edge palo santo typewriter enamel pin leggings. Viral swag man braid, cray butcher williamsburg raw denim twee live-edge edison bulb YOLO iceland chambray. Tattooed farm-to-table trust fund affogato, chicharrones health goth hoodie slow-carb church-key keffiyeh heirloom jianbing viral kitsch. Synth leggings pug, la croix pok pok lomo kombucha wayfarers jean shorts unicorn trust fund.
       </p>
     </div>
   </div>
 
-  <div id="research" class="slide-wrapper odd">
+  <div id="research" class="slide-wrapper odd section">
     <div class="slide" data-aos="fade-up">
       <h2>The Inventories</h2>
       <div class="text-container">
@@ -251,7 +257,7 @@
     </div>
   </div>
 
-  <div id="background">
+  <div id="background" class="dv">
     <div id="circ">
       <!-- <div class="d3-wrapper" id="chart">
 
@@ -270,7 +276,7 @@
 
   </div>
 
-  <div id="r2" class="slide-wrapper even">
+  <div id="r2" class="slide-wrapper even section">
     <div class ="slide">
       <h2>Material Culture</h2>
       <!-- <h2>Changing Material Culture/Trends in Consumerism</h2> -->
@@ -293,7 +299,7 @@
     </div>
   </div>
 
-  <div id="methodology" class="slide-wrapper even">
+  <div id="methodology" class="slide-wrapper even section">
     <div class="slide" data-aos="fade-up">
       <h2>Methodology</h2>
       <div class="text-container">
@@ -312,7 +318,7 @@
     </div>
   </div>
 
-  <div id="conclusion" class="slide-wrapper odd">
+  <div id="conclusion" class="slide-wrapper odd section">
     <div class="slide" data-aos="fade-up">
     <h2>Conclusions</h2>
     <div class="text-container">

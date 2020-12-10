@@ -168,7 +168,7 @@ function _sColors() {
    "Alcohol": "#0570b0",
    "Men Clothes": "#0570b0",
    "Silver Plate": "#045a8d",
-   "Damaged": "#9a9a9a"
+   "Damaged": "#cdced294"
   }
   return colors;
 }

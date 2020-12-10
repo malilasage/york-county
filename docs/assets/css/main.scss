@@ -1,7 +1,7 @@
 ---
 ---
 $link-color: white;
-$sans-serif: "bennet-text-four";
+// $sans-serif: "bennet-text-four";
 
 @charset "utf-8";
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
@@ -22,4 +22,9 @@ html, .greedy-nav {
 .page__footer {
   background-color: $darkblue;
   margin-top: 0;
+}
+
+.citation {
+  padding-left: 30px;
+  text-indent: -30px;
 }

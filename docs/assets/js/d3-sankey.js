@@ -29,7 +29,7 @@ svg.append("g")
       .attr("fill", d => {
         let c;
           for (const link of d.sourceLinks) {
-            c = d3.color("#bd0026").darker(0.3);
+            c = d3.color("#a6bddb").darker(0.3);
         }
         for(const link of d.targetLinks) {
          if (c === undefined) c = d3.color(link.color).darker(0.5);

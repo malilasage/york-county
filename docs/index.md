@@ -4,7 +4,9 @@ title: "York County Estates"
 custom-javascript:
  - /assets/js/test.js
  - /assets/js/d3-sankey.js
- - /assets/js/d3-circle.js
+# - /assets/js/d3-circle.js
+ - /assets/js/d3-bub.js
+ - /assets/js/d3-line.js
 
 #toc: true
 #toc_sticky: true

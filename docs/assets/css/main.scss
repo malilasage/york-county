@@ -10,6 +10,9 @@ $link-color: white;
 $blue: #353d5a;
 $darkblue: #1c2031;
 
+.grid__item {
+  padding-left: 3em;
+}
 
 html, .greedy-nav {
   background-color: $blue;

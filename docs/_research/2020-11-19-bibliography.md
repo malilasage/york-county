@@ -9,6 +9,10 @@ Lucas, Wendy, and Noel Campbell. *“Unwritten Rules and Gendered Frames Amongst
 ~
 Lucas, Wendy, and Noel Campbell. *“York County Probate Records 1700-1800.”* ScholarlyCommons, November 1, 2016. [repository.upenn.edu/mead/26/](https://repository.upenn.edu/mead/26/).
 ~
+Horn, James P. P. ""The Bare Necessities:" Standards of Living in England and the Chesapeake, 1650-1700." *Historical Archaeology* 22, no. 2 (1988): 74-91. [jstor.org/stable/25615692](http://www.jstor.org/stable/25615692).
+~
+Carr, Lois Green, and Lorena S. Walsh. "The Standard of Living in the Colonial Chesapeake." *The William and Mary Quarterly* 45, no. 1 (1988): 135-59. doi:10.2307/1922219.
+~
 Stephenson , Mary A. *“Colonial Williamsburg Digital Library.” Block 27 Lots 269 & 270 Historical Report* | Colonial Williamsburg Digital Library, 1990. [research.colonialwilliamsburg.org/DigitalLibrary/view/index.cfm?doc=ResearchReports%5CRR1517](https://research.colonialwilliamsburg.org/DigitalLibrary/view/index.cfm?doc=ResearchReports%5CRR1517.xml).
 ~
 William & Mary Libraries. *“James Horrocks (1734-1772),”* September 9, 2019. [scdbwiki.swem.wm.edu/wiki/index.php/James_Horrocks_(1734-1772)](https://scdbwiki.swem.wm.edu/wiki/index.php/James_Horrocks_(1734-1772)).
@@ -24,6 +28,8 @@ Goodwin, Mary. *“Colonial Williamsburg Digital Library.”* Sheilds Tavern His
 Fishbone, Beryl. *“Ordinary? Tavern? or Inn?” The Bulletin.* The Bulletin, July 3, 2012. [norwichbulletin.com/article/20120703/BLOGS/307039953](https://www.norwichbulletin.com/article/20120703/BLOGS/307039953).
 ~
 Bullock, Thomas, and Maurice Tonkin . *“Colonial Williamsburg Digital Library.” Wigmaker's Shop Historical Report, Block 9 Building 29B* | Colonial Williamsburg Digital Library, 1990. [research.colonialwilliamsburg.org/DigitalLibrary/view/index.cfm?doc=ResearchReports%5CRR0183](https://research.colonialwilliamsburg.org/DigitalLibrary/view/index.cfm?doc=ResearchReports%5CRR0183.xml).
+~
+Walsh, Lorena S. "Urban Amenities and Rural Sufficiency: Living Standards and Consumer Behavior in the Colonial Chesapeake, 1643-1777." *The Journal of Economic History* 43, no. 1 (1983): 109-17. [jstor.org/stable/2120269](http://www.jstor.org/stable/2120269).
 {% endcapture %}
 {% assign citations = citation | split: "~" %}
 

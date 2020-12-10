@@ -1,4 +1,9 @@
 ---
-title:  "bibliography"
+title:  "Bibliography"
+layout: single
+page__date: false
 ---
-### hello world
+
+
+
+#### Image Credits

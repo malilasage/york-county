@@ -6,5 +6,3 @@ layout: collection
 collection: research
 entries_layout: grid
 ---
-
-## foo

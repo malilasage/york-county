@@ -1,5 +1,8 @@
 ---
 ---
+$link-color: white;
+$sans-serif: "bennet-text-four";
+
 @charset "utf-8";
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes";
@@ -7,8 +10,13 @@
 $blue: #353d5a;
 $darkblue: #1c2031;
 
+
 html, .greedy-nav {
   background-color: $blue;
+}
+
+.greedy-nav .visible-links a:before {
+  background: white;
 }
 
 .page__footer {

@@ -270,13 +270,21 @@ header {
 //carousel
 .carousel-nav {
   padding-top: 4em;
-  padding-bottom: 4em;
+  // padding-bottom: 4em;
+  padding-bottom: 1.5em;
   text-align: center;
   display: inline-block;
   padding-right: 1em;
   float: right;
-  position: sticky;
-  top: 0;
+  // position: sticky;
+  // top: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-family: "bennet-text-two-regular";
+  span {
+    opacity: 0.6;
+  }
 }
 
 .prev, .next {
@@ -312,6 +320,9 @@ header {
 
 .carousel-slide {
   display: none;
+  h2 {
+    font-size: 2.5em;
+  }
 }
 
 .side-bar {

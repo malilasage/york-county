@@ -160,7 +160,8 @@ header {
   // filter: grayscale(0.15); NO this is what broke the header
   position: relative;
   text-align: center;
-  // opacity: 0.8;
+  background-blend-mode: lighten;
+  background-color: #fcf0ca52;
   z-index: -1;
   .hgroup {
         position: fixed;
@@ -168,6 +169,9 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        background-color: #fbedc757;
+        box-shadow: 0px 0px 5px 10px #fbedc76e;
+        border-radius: 25px;
 
             // font-size: 4em;
             // font-family: "kings-caslon-bold";

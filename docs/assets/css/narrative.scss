@@ -420,11 +420,18 @@ header {
 }
 
 #chart {
-  padding: 3em 6em 3em 1em;
+  padding: 3em 6em 2em 1em;
   background-color: white;
   width: 80%;
   height: auto;
   overflow: scroll;
+}
+
+#legend {
+
+  padding-left: 1em;
+  // max-height: 50px;
+  // width: auto;
 }
 
 #circ {

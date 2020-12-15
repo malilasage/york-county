@@ -43,26 +43,48 @@ $(window).on("load", () => {
   });
 };
 
-    var curCircle;
-    document.addEventListener('aos:in:bar', ({ detail }) => {
-      // $("#chart > svg").d3Click();
-      initBub();
-      // var id = $(detail).attr('data-index');
-      // console.log(id + "bar in");
-      // // console.log(!($("#chart > svg")));
-      // if(id != curCircle) {
-      //   // console.log((curCircle != id));
-      //   console.log(id === 0);
-      //   curCircle = id;
-      //   // console
-      //   if(id === 0) {
-      //     console.log("init");
-      //     // initCircles();
-      //   } else {
-      //     $("#chart > svg").d3Click();
-      //   }
-      // }
-    });
+initCircles();
+legend();
+  var curCircle = 0;
+  document.addEventListener('aos:in:bar', ({ detail }) => {
+    var id = $(detail).attr('data-index');
+    const draw = [drawCircles, drawForce];
+
+    if(id != curCircle) {
+      curCircle = id;
+      clean("circle").then(() => {
+        // initSankey(sankeyData[id]);
+        console.log("3. drawing");
+        var svg = d3.select("#chart").select("svg");
+        draw[id](svg);
+        // drawCircles(svg);
+        // initCircles();
+      }).catch((err) => {
+        console.log(err);
+      })
+    }
+  });
+
+    // var curCircle;
+    // document.addEventListener('aos:in:bar', ({ detail }) => {
+    //   // $("#chart > svg").d3Click();
+    //   initBub();
+    //   // var id = $(detail).attr('data-index');
+    //   // console.log(id + "bar in");
+    //   // // console.log(!($("#chart > svg")));
+    //   // if(id != curCircle) {
+    //   //   // console.log((curCircle != id));
+    //   //   console.log(id === 0);
+    //   //   curCircle = id;
+    //   //   // console
+    //   //   if(id === 0) {
+    //   //     console.log("init");
+    //   //     // initCircles();
+    //   //   } else {
+    //   //     $("#chart > svg").d3Click();
+    //   //   }
+    //   // }
+    // });
 
   // vegaEmbed('#timeline-wrapper', vSpec);
   // main();
@@ -152,15 +174,42 @@ function showSlides(n) {
 
 //remove d3 vizualizations
 async function clean(chart) {
-  var svg = d3.select("#sK-wrapper").select("svg");
+  if(chart === "svg") {
+    var svg = d3.select("#sK-wrapper").select("svg");
 
-  await svg.transition()
-    .duration(500)
-    .style("opacity", 0)
-    .remove();
-    // .end();
+    await svg.transition()
+      .duration(500)
+      .style("opacity", 0)
+      .remove();
+      // .end();
 
-    // svg.remove();
+      // svg.remove();
+  }
+  else if(chart === "circle") {
+    console.log("2. cleaning");
+    var svg = d3.select("#chart");
+    // await svg.transition()
+    //         .duration(500)
+    //         .style("opacity", 0)
+    //         .remove();
+    var delay = timeout(2000);
+    /*await*/ svg.transition().duration(2000)
+            .selectAll('circle')
+              .attr('r', d => d.value/16)
+              .attr('opacity', "0")
+              .attr("cx", 0)
+              .attr("cy", 0);
+          svg.transition().delay(2000).selectAll("g").remove();
+    //       .transition().duration(500)
+    //         .selectAll("svg")
+    //         .remove();
+    await delay;
+  }
+
+}
+
+function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 

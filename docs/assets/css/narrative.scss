@@ -460,6 +460,10 @@ header {
   min-height: 100vh;
 }
 
+#conclusion {
+  min-height: 80vh;
+}
+
 //responsive + media queries
 @media (max-width: 800px) {
   body {

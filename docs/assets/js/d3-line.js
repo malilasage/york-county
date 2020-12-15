@@ -118,19 +118,6 @@ function _lineChart(height, width, margin, data) {
 
 
 
-
-
-  // const line =
-
-  // function line(data) {
-  //   return d3.line()
-  //     .curve(d3.curveBasis)
-  //     .x((d, i) => x(data.dates[i]))
-  //     .y(d => y(d));
-  // }
-
-
-
   function _y(data, margin, height){
     return d3.scaleLinear()
       .domain([0, d3.max(data.series, d => d3.max(d.values))]).nice()
@@ -214,39 +201,3 @@ async function _lineFile(file) {
     return response.text();
   });
 }
-
-// function x(data, margin, width) {
-//   return d3.scaleUtc()
-//     .domain(d3.extent(data.dates))
-//     .range([margin.left, width - margin.right]);
-// }
-//
-// function _y(data, margin, height){
-//   return d3.scaleLinear()
-//     .domain([0, d3.max(data.series, d => d3.max(d.values))]).nice()
-//     .range([height - margin.bottom, margin.top]);
-// }
-
-// function xAxis(g) {
-//   return g
-//     .attr("transform", `translate(0,${height - margin.bottom})`)
-//     .call(d3.axisBottom(x).ticks(width / 80).tickSizeOuter(0));
-// }
-
-// function _yAxis(data, y, margin){
-//   return g.attr("transform", `translate(${margin.left},0)`)
-//     .call(d3.axisLeft(y))
-//     .call(g => g.select(".domain").remove())
-//     .call(g => g.select(".tick:last-of-type text").clone()
-//         .attr("x", 3)
-//         .attr("text-anchor", "start")
-//         .attr("font-weight", "bold")
-//         .text(data.y));
-// }
-
-// function _line() {
-//   return d3.line()
-//     .curve(d3.curveBasis)
-//     .x((d, i) => x(data.dates[i]))
-//     .y(d => y(d));
-// }

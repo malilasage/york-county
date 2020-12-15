@@ -1,5 +1,4 @@
 function initCircles() {
-  console.log("1. initializing");
     const width = 680;
     const height = 450;
     const svg = d3.select("#chart").append("svg")
@@ -8,14 +7,9 @@ function initCircles() {
 }
 
 function drawCircles(svg) {
-  console.log("4. drawing circles");
   const width = 680;
   const height = 450;
   const nodes = stepOneData.map(d => Object.create(d));
-  // console.log(nodes);
-
-  // const svg = d3.select("#chart").append("svg")
-  //   .attr("viewBox", [-width/2, -height/2, width, height]);
 
   const node = svg.append("g")
       .attr("stroke", "#fff")
@@ -29,50 +23,17 @@ function drawCircles(svg) {
       .attr("cy", (d,i) => { return i<9 ? 50 : -50})
       .attr("opacity", 0.5)
       .attr("fill", d => colors[d.name]);
-  // function hello() {
-  //   console.log("hey");
-  // }
-
-  // svg.on("click", () => {
-  //        svg.selectAll('circle')
-  //       .transition().duration(2000)
-  //       .attr('r', d => d.value/16)
-  //       .attr('opacity', "0")
-  //       .attr("cx", 0)
-  //       .attr("cy", 0)
-  //       .remove();
-  // })
-
-  // function update() {
-  //   console.log("layout");
-  //
-  //      svg.selectAll('circle')
-  //       .transition().duration(2000)
-  //       .attr('r', d => d.value/16)
-  //       .attr('opacity', "0")
-  //       .attr("cx", 0)
-  //       .attr("cy", 0);
-  //       // .remove();
-  // }
-
-  // return Object.assign(svg.node(), {update});
   return svg.node();
 }
 
 function drawForce(svg) {
-  console.log("drawing force");
   const width = 680;
   const height = 450;
-
-  // const svg = d3.create("svg")
-    // .attr("viewBox", [-width / 2, -height / 2, width, height]);
 
   const positioning = [{"x": -150, "y": -100},{"x": 150, "y": -100},{"x": -150, "y": 100},{"x": 150, "y": 100}];
 
   stepTwoData.forEach((year, i) => {
    const nodes = year.children.map(d => Object.create(d));
-    console.log(d3.median(year.children, d => d.value)); //5, 40, 200
-
 
    const node = svg.append("g")
       .attr("stroke", "#fff")
@@ -80,14 +41,11 @@ function drawForce(svg) {
     .selectAll("circle")
     .data(nodes)
     .join("circle")
-      // .transition().duration(2000)
       .attr("r", d => d.value/4)
       .attr("opacity", 0.5)
       .attr("fill", d => colors[d.name]);
 
      const simulation = d3.forceSimulation(nodes)
-      // .velocityDecay(0.1)
-      // .friction(0.2)
       .force("charge", d3.forceManyBody())
       .force("x", d3.forceX(d => positioning[i].x)) //controls axis
       .force("y", d3.forceY(d => positioning[i].y))
@@ -119,11 +77,8 @@ function legend() {
 const svg = d3.select("#legend").append("svg").attr("viewBox", [0, 0, 100, 18]);
  const keys = Object.keys(colors);
 
- // const sizeScale = d3.scaleLinear(d3.extent(legendData, d => d.Median), [5, 35]);
   const sizeScale = [{"value": 20},{"value": 150},{"value": 475}];
   const sizeScaleTwo = [{"value": 5},{"value": 40},{"value": 200}]; //5, 40, 200
-  // console.log(d3.extent(legendData, d => d.value));
-  // console.log(d3.median(legendData, d => d.value));
 
  function position(i) {
   return i < 5 ? 1 : i < 10 ? 20 : 35;
@@ -137,7 +92,7 @@ const svg = d3.select("#legend").append("svg").attr("viewBox", [0, 0, 100, 18]);
   .enter()
   .append("circle")
     .attr("cx", (d, i) => {return position(i)})
-    .attr("cy", function(d,i){ return 1 + positionY(i)*3}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("cy", function(d,i){ return 1 + positionY(i)*3})
     .attr("r", 0.5)
     .attr("opacity", 0.5)
     .style("fill", function(d){ return colors[d]})
@@ -148,13 +103,13 @@ const svg = d3.select("#legend").append("svg").attr("viewBox", [0, 0, 100, 18]);
   .append("text")
     .style("font-size", "1.5px")
     .attr("x", (d, i) => {return position(i) + 2})
-    .attr("y", function(d,i){ return 1 + positionY(i)*3}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("y", function(d,i){ return 1 + positionY(i)*3})
     .style("fill", function(d){ return colors[d]})
     .text(function(d){ return d})
     .attr("text-anchor", "left")
     .style("alignment-baseline", "middle")
 
-  // svg.selectAll("sizedots")//this rlly only works for step one
+  // svg.selectAll("sizedots")
   //   .data(sizeScale)
   //   .enter()
   //   .append("circle")
@@ -173,7 +128,7 @@ const svg = d3.select("#legend").append("svg").attr("viewBox", [0, 0, 100, 18]);
  //    // .filter((d) => {return d.value > 50})
  //    .style("font-size", "2px")
  //    .attr("x", 67)
- //    .attr("y", function(d,i){return i < 2 ? 1 + i*4 : 11}) // 100 is where the first dot appears. 25 is the distance between dots
+ //    .attr("y", function(d,i){return i < 2 ? 1 + i*4 : 11})
  //    .style("fill", "gray")
  //    .text(function(d){ return d.value})
  //    .attr("text-anchor", "left")
@@ -181,11 +136,10 @@ const svg = d3.select("#legend").append("svg").attr("viewBox", [0, 0, 100, 18]);
 
 
 
-   svg.selectAll("sizedots")//this rlly only works for step one
+   svg.selectAll("sizedots")
     .data(sizeScaleTwo)
     .enter()
     .append("circle")
-      // .filter((d, i) => {return i%2 === 0 ? d : null})
       .attr("cx", d => 60)
       .attr("cy", (d, i) => {return i < 2 ? 1 + i*3 : 11})
       .attr("r", d => d.value/50)
@@ -197,10 +151,9 @@ const svg = d3.select("#legend").append("svg").attr("viewBox", [0, 0, 100, 18]);
   .data(sizeScaleTwo)
   .enter()
   .append("text")
-    // .filter((d) => {return d.value > 50})
     .style("font-size", "1.5px")
     .attr("x", 67)
-    .attr("y", function(d,i){return i < 2 ? 1 + i*4 : 11}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("y", function(d,i){return i < 2 ? 1 + i*4 : 11})
     .style("fill", "gray")
     .text(function(d){ return d.value})
     .attr("text-anchor", "left")
@@ -471,25 +424,6 @@ const stepTwoData = [
     ]
   }
 ];
-
-
-// const colors = {
-//   "Spinning": "#0570b0",
-//   "Chickens": "#3690c0",
-//   "Earthen": "#74a9cf",
-//   "Chamber Pots": "#a6bddb",
-//   "Laundry": "#d0d1e6",
-//   "Dairy": "#ece7f2",
-//   "Brew": "#ffeda0",
-//   "HH Linens": "#fed976",
-//   "Distill" : "#bd0026",
-//   "Textile": "#feb24c",
-//   "Hunt War": "#bd0026",
-//   "Sewing": "#e31a1c",
-//   "Women Clothes": "#fc4e2a",
-//   "Men clothes": "#fd8d3c",
-//   "Razor": "#feb24c"
-// };
 
 const colors = {
    "Spinning": "#0570b0",
